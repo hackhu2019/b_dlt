@@ -60,6 +60,11 @@ def test_build_helper_command_contains_expected_arguments(tmp_path: Path) -> Non
 
 def test_run_export_creates_output_file_and_returns_summary(tmp_path: Path) -> None:
     output_file = tmp_path / "secret" / "bili.cookies.txt"
+    fake_yt_dlp = tmp_path / "yt-dlp"
+    fake_yt_dlp.write_text(
+        "#!/tmp/embedded-python\nfrom yt_dlp import main\n",
+        encoding="utf-8",
+    )
 
     def fake_runner(command, check=False, capture_output=True, text=True):
         Path(command[4]).write_text("# Netscape HTTP Cookie File\n", encoding="utf-8")
@@ -70,7 +75,7 @@ def test_run_export_creates_output_file_and_returns_summary(tmp_path: Path) -> N
         browser="chrome",
         overwrite=True,
         runner=fake_runner,
-        which=lambda name: "/opt/homebrew/bin/yt-dlp",
+        which=lambda name: str(fake_yt_dlp) if name == "yt-dlp" else None,
     )
 
     assert summary.output_file == output_file
