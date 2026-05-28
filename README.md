@@ -63,6 +63,13 @@ pip install -e .[dev]
 make verify
 ```
 
+GitHub 上的最小 CI 也会执行：
+
+```bash
+make check
+pytest -q
+```
+
 ## 快速开始
 
 1. 复制环境变量模板
