@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Environment
+.env
+*.cookies.txt
+*.cookies
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Generated data
+data/manifests/*.lock
+data/audio/**
+!data/audio/.gitkeep
+data/subtitles/**
+!data/subtitles/.gitkeep
+data/transcripts/raw/**
+!data/transcripts/raw/.gitkeep
+data/transcripts/clean/**
+!data/transcripts/clean/.gitkeep
+data/summaries/videos/**
+!data/summaries/videos/.gitkeep
+data/summaries/creators/**
+!data/summaries/creators/.gitkeep
+data/exports/**
+!data/exports/.gitkeep
+db/**
+!db/.gitkeep
+logs/**
+!logs/.gitkeep
