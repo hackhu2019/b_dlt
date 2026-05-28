@@ -122,6 +122,9 @@ tests/        自动化测试
 
 - `pyproject.toml`：项目元数据与开发依赖
 - `Makefile`：本地检查与测试快捷命令
+- `CHANGELOG.md`：版本变更记录
+- `SECURITY.md`：安全与敏感信息处理规则
+- `CODE_OF_CONDUCT.md`：社区协作行为准则
 
 ## 计划中的工作流
 
