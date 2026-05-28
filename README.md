@@ -125,6 +125,7 @@ tests/        自动化测试
 - `CHANGELOG.md`：版本变更记录
 - `SECURITY.md`：安全与敏感信息处理规则
 - `CODE_OF_CONDUCT.md`：社区协作行为准则
+- `docs/roadmap.md`：项目边界、阶段目标与非目标
 
 ## 计划中的工作流
 
